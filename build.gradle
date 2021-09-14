@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+//Java target version
+sourceCompatibility = 16
+targetCompatibility = 16
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    //implementation of mariadb's jdbc driver
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
+}
+
+test {
+    useJUnitPlatform()
+}
